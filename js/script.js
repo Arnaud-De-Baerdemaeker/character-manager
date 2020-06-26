@@ -1,11 +1,24 @@
-const axios = require('axios').default;
+// const axios = require('axios').default;
 
 let charactersDatabase = fetch("https://character-database.becode.xyz/characters")
-.then(function(charactersDatabase)
+.then((charactersDatabase) =>
 {
-    return charactersDatabase.json();
+	return charactersDatabase.json();
 })
-.then(function(charactersDatabase)
+.then((charactersDatabase) =>
 {
-    let template = document.getElementById("template").content;
+	let template = document.getElementById("template").content;
+	let newPlace = document.getElementById("target");
+	
+
+	charactersDatabase.forEach((element) =>
+	{
+		let templateClone = template.cloneNode(true);
+		
+		templateClone.getElementById("image").innerHTML = element.image;
+		templateClone.getElementById("name").innerHTML = element.name;
+		templateClone.getElementById("short-description").innerHTML = element.shortDescription;
+
+		newPlace.appendChild(templateClone);
+	})
 })
