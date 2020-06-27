@@ -15,7 +15,7 @@ let charactersDatabase = fetch("https://character-database.becode.xyz/characters
 	{
 		let templateClone = template.cloneNode(true);
 		
-		templateClone.getElementById("image").innerHTML = element.image;
+		templateClone.getElementById("image").src = "data:image/gif;base64," + element.image;
 		templateClone.getElementById("name").innerHTML = element.name;
 		templateClone.getElementById("short-description").innerHTML = element.shortDescription;
 
