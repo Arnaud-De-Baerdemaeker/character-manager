@@ -4,16 +4,35 @@
 	<head>
 		<!-- Import Google Icon Font -->
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		
 		<!-- Import materialize.css -->
-		<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+		<!--<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>-->
+
+		<link rel="stylesheet" href="css/single-character-style.css">
 
 		<!-- Let browser know website is optimized for mobile -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	</head>
 
 	<body>
+		<main>
+			<template id="template">
+				<div class="card">
+					<figure class="card__image">
+						<img src="" alt="" id="image">
+					</figure>
+
+					<h2 class="card__title" id="name"></h2>
+
+					<p class="card__description" id="short-description"></p>
+				</div>
+			</template>
+
+			<div class="target" id="target"></div>
+		</main>
 
 		<!--JavaScript at end of body for optimized loading-->
-		<script type="text/javascript" src="js/materialize.min.js"></script>
+		<!--<script type="text/javascript" src="js/materialize.min.js"></script>-->
+		<script src="js/single-character-script.js"></script>
 	</body>
 </html>
