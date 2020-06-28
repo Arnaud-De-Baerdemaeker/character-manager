@@ -8,7 +8,7 @@
 		<!-- Import materialize.css -->
 		<!--<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>-->
 
-		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/index-style.css">
 
 		<!-- Let browser know website is optimized for mobile -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -19,25 +19,23 @@
 			<template id="template">
 				<div class="card">
 					<figure class="card__image">
-						<img src="" id="image">
+						<img src="" alt="" id="image">
 					</figure>
 
-					<h2 class="card__title" id="name">
-					</h2>
+					<h2 class="card__title" id="name"></h2>
 
-					<p class="card__description" id="short-description">
-					</p>
+					<p class="card__description" id="short-description"></p>
 
 					<ul class="card__buttons">
 						<li>
-							<a href="" target="_blank">
+							<a href="single-character.html" target="_blank">
 								<button id="" title="See the character">
 									<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiIHdpZHRoPSIxOHB4IiBoZWlnaHQ9IjE4cHgiPjxwYXRoIGQ9Ik0wIDBoMjR2MjRIMFYweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0xMS41IDlDMTAuMTIgOSA5IDEwLjEyIDkgMTEuNXMxLjEyIDIuNSAyLjUgMi41IDIuNS0xLjEyIDIuNS0yLjVTMTIuODggOSAxMS41IDl6TTIwIDRINGMtMS4xIDAtMiAuOS0yIDJ2MTJjMCAxLjEuOSAyIDIgMmgxNmMxLjEgMCAyLS45IDItMlY2YzAtMS4xLS45LTItMi0yem0tMy45MiAxMy41bC0yLjItMi4yYy0uOS41OC0yLjAzLjg0LTMuMjIuNjItMS44OC0uMzUtMy4zOC0xLjkzLTMuNjItMy44My0uMzgtMy4wMSAyLjE4LTUuNTIgNS4yMS01LjA0IDEuODguMyAzLjM5IDEuODQgMy43IDMuNzEuMTkgMS4xNi0uMDggMi4yMy0uNjQgMy4xMmwyLjIgMi4xOWMuMzkuMzkuMzkgMS4wMyAwIDEuNDItLjQuNC0xLjA0LjQtMS40My4wMXoiLz48L3N2Zz4=" alt="View">
 								</button>
 							</a>
 						</li>
 						<li>
-							<a href="" target="_blank">
+							<a href="character-editor.html" target="_blank">
 								<button id="" title="Edit the character">
 									<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiIHdpZHRoPSIxOHB4IiBoZWlnaHQ9IjE4cHgiPjxwYXRoIGQ9Ik0wIDBoMjR2MjRIMFYweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0zIDE3LjQ2djMuMDRjMCAuMjguMjIuNS41LjVoMy4wNGMuMTMgMCAuMjYtLjA1LjM1LS4xNUwxNy44MSA5Ljk0bC0zLjc1LTMuNzVMMy4xNSAxNy4xYy0uMS4xLS4xNS4yMi0uMTUuMzZ6TTIwLjcxIDcuMDRjLjM5LS4zOS4zOS0xLjAyIDAtMS40MWwtMi4zNC0yLjM0Yy0uMzktLjM5LTEuMDItLjM5LTEuNDEgMGwtMS44MyAxLjgzIDMuNzUgMy43NSAxLjgzLTEuODN6Ii8+PC9zdmc+" alt="Edit">
 								</button>
@@ -56,11 +54,15 @@
 
 			<div class="target" id="target"></div>
 
-			<button id="">NEW CHARACTER</button>
+			<div class="button__new-character" id="new-character">
+				<a href="character-creation.html" target="_blank">
+					<button>NEW CHARACTER</button>
+				</a>
+			</div>
 		</main>
 
 		<!--JavaScript at end of body for optimized loading-->
-		<script type="text/javascript" src="js/materialize.min.js"></script>
-		<script type="text/javascript" src="js/script.js"></script>
+		<!--<script type="text/javascript" src="js/materialize.min.js"></script>-->
+		<script type="text/javascript" src="js/index-script.js"></script>
 	</body>
 </html>
