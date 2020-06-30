@@ -65,7 +65,7 @@ h1
 	.card /* div */
 	{
 		background-color: rgb(255, 255, 255);
-		width: 225px;
+		width: 240px;
 		margin: 0 auto 20px auto;
 		justify-content: center;
 		border-radius: 10px;
@@ -86,7 +86,7 @@ h1
 	.card /* div */
 	{
 		background-color: rgb(255, 255, 255);
-		width: 225px;
+		width: 300px;
 		margin: 0 auto 20px auto;
 		justify-content: center;
 		border-radius: 10px;
@@ -107,7 +107,7 @@ h1
 	.card /* div */
 	{
 		background-color: rgb(255, 255, 255);
-		width: 225px;
+		width: 250px;
 		margin: 0 auto 20px auto;
 		justify-content: center;
 		border-radius: 10px;
@@ -158,7 +158,7 @@ h1
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
 	letter-spacing: 2px;
-	font-size: 30px;
+	font-size: 250%;
 	font-family: "Indie Flower", cursive;
 }
 
@@ -166,18 +166,21 @@ h1
 {
 	margin: 0 0 20px 0;
 	text-align: center;
-	font-size: 17px;
+	font-size: 150%;
 	word-spacing: 2px;
 }
 
 .card__id /* div */
 {
 	display: none;
+	text-align: center;
+	margin: 0 0 20px 0;
 }
 
 .card__description /* div */
 {
 	display: none;
+	text-align: justify;
 }
 
 .card__buttons /* ul */
@@ -188,6 +191,7 @@ h1
 	padding: 0;
 	justify-items: center;
 	height: 35px;
+	bottom: 0;
 }
 
 .card__buttons > li
@@ -195,14 +199,22 @@ h1
 	list-style-type: none;
 }
 
-.card__buttons > li > a
+.card__buttons > li > a > button
 {
 	display: block;
 	border-radius: 2px;
+	width: 60px;
+	height: 35px;
+	align-items: center;
+	padding: 0;
+	background-color: rgb(4, 59, 140);
+	border: none;
+	border-radius: 2px;
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 
 }
 
-.card__buttons > li > a > button
+.card__buttons > li > button
 {
 	width: 60px;
 	height: 35px;
