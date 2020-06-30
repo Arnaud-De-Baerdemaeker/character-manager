@@ -17,7 +17,7 @@
 				List of characters
 			</h1>
 
-			<template id="template">
+			<template id="template-list">
 				<div class="card">
 					<figure class="card__image">
 						<img src="" alt="" class="image">
@@ -27,37 +27,48 @@
 
 					<p class="card__short-description"></p>
 
-					<div class="card__id"></div>
-
-					<div class="card__description"></div>
-
 					<ul class="card__buttons">
 						<li>
-							<a href="single-character.html" target="_blank">
-								<button class="view" title="See the character">
-									<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiIHdpZHRoPSIxOHB4IiBoZWlnaHQ9IjE4cHgiPjxwYXRoIGQ9Ik0wIDBoMjR2MjRIMFYweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0xMS41IDlDMTAuMTIgOSA5IDEwLjEyIDkgMTEuNXMxLjEyIDIuNSAyLjUgMi41IDIuNS0xLjEyIDIuNS0yLjVTMTIuODggOSAxMS41IDl6TTIwIDRINGMtMS4xIDAtMiAuOS0yIDJ2MTJjMCAxLjEuOSAyIDIgMmgxNmMxLjEgMCAyLS45IDItMlY2YzAtMS4xLS45LTItMi0yem0tMy45MiAxMy41bC0yLjItMi4yYy0uOS41OC0yLjAzLjg0LTMuMjIuNjItMS44OC0uMzUtMy4zOC0xLjkzLTMuNjItMy44My0uMzgtMy4wMSAyLjE4LTUuNTIgNS4yMS01LjA0IDEuODguMyAzLjM5IDEuODQgMy43IDMuNzEuMTkgMS4xNi0uMDggMi4yMy0uNjQgMy4xMmwyLjIgMi4xOWMuMzkuMzkuMzkgMS4wMyAwIDEuNDItLjQuNC0xLjA0LjQtMS40My4wMXoiLz48L3N2Zz4=" alt="View">
-								</button>
-							</a>
+							<button class="view" title="See the character">
+								<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiIHdpZHRoPSIxOHB4IiBoZWlnaHQ9IjE4cHgiPjxwYXRoIGQ9Ik0wIDBoMjR2MjRIMFYweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0xMS41IDlDMTAuMTIgOSA5IDEwLjEyIDkgMTEuNXMxLjEyIDIuNSAyLjUgMi41IDIuNS0xLjEyIDIuNS0yLjVTMTIuODggOSAxMS41IDl6TTIwIDRINGMtMS4xIDAtMiAuOS0yIDJ2MTJjMCAxLjEuOSAyIDIgMmgxNmMxLjEgMCAyLS45IDItMlY2YzAtMS4xLS45LTItMi0yem0tMy45MiAxMy41bC0yLjItMi4yYy0uOS41OC0yLjAzLjg0LTMuMjIuNjItMS44OC0uMzUtMy4zOC0xLjkzLTMuNjItMy44My0uMzgtMy4wMSAyLjE4LTUuNTIgNS4yMS01LjA0IDEuODguMyAzLjM5IDEuODQgMy43IDMuNzEuMTkgMS4xNi0uMDggMi4yMy0uNjQgMy4xMmwyLjIgMi4xOWMuMzkuMzkuMzkgMS4wMyAwIDEuNDItLjQuNC0xLjA0LjQtMS40My4wMXoiLz48L3N2Zz4=" alt="View">
+							</button>
 						</li>
 						<li>
-							<a href="character-editor.html" target="_blank">
+							<a href="character-editor.html">
 								<button class="edit" title="Edit the character">
 									<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiIHdpZHRoPSIxOHB4IiBoZWlnaHQ9IjE4cHgiPjxwYXRoIGQ9Ik0wIDBoMjR2MjRIMFYweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0zIDE3LjQ2djMuMDRjMCAuMjguMjIuNS41LjVoMy4wNGMuMTMgMCAuMjYtLjA1LjM1LS4xNUwxNy44MSA5Ljk0bC0zLjc1LTMuNzVMMy4xNSAxNy4xYy0uMS4xLS4xNS4yMi0uMTUuMzZ6TTIwLjcxIDcuMDRjLjM5LS4zOS4zOS0xLjAyIDAtMS40MWwtMi4zNC0yLjM0Yy0uMzktLjM5LTEuMDItLjM5LTEuNDEgMGwtMS44MyAxLjgzIDMuNzUgMy43NSAxLjgzLTEuODN6Ii8+PC9zdmc+" alt="Edit">
 								</button>
 							</a>
 						</li>
 						<li>
-							<a href="#">
-								<button class="delete" title="Delete the character">
-									<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiIHdpZHRoPSIxOHB4IiBoZWlnaHQ9IjE4cHgiPjxwYXRoIGQ9Ik0wIDBoMjR2MjRIMFYweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik02IDE5YzAgMS4xLjkgMiAyIDJoOGMxLjEgMCAyLS45IDItMlY5YzAtMS4xLS45LTItMi0ySDhjLTEuMSAwLTIgLjktMiAydjEwek0xOCA0aC0yLjVsLS43MS0uNzFjLS4xOC0uMTgtLjQ0LS4yOS0uNy0uMjlIOS45MWMtLjI2IDAtLjUyLjExLS43LjI5TDguNSA0SDZjLS41NSAwLTEgLjQ1LTEgMXMuNDUgMSAxIDFoMTJjLjU1IDAgMS0uNDUgMS0xcy0uNDUtMS0xLTF6Ii8+PC9zdmc+" alt="Delete">
-								</button>
-							</a>
+							<button class="delete" title="Delete the character" id="delete">
+								<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiIHdpZHRoPSIxOHB4IiBoZWlnaHQ9IjE4cHgiPjxwYXRoIGQ9Ik0wIDBoMjR2MjRIMFYweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik02IDE5YzAgMS4xLjkgMiAyIDJoOGMxLjEgMCAyLS45IDItMlY5YzAtMS4xLS45LTItMi0ySDhjLTEuMSAwLTIgLjktMiAydjEwek0xOCA0aC0yLjVsLS43MS0uNzFjLS4xOC0uMTgtLjQ0LS4yOS0uNy0uMjlIOS45MWMtLjI2IDAtLjUyLjExLS43LjI5TDguNSA0SDZjLS41NSAwLTEgLjQ1LTEgMXMuNDUgMSAxIDFoMTJjLjU1IDAgMS0uNDUgMS0xcy0uNDUtMS0xLTF6Ii8+PC9zdmc+" alt="Delete">
+							</button>
 						</li>
 					</ul>
 				</div>
 			</template>
 
+			
+			<template id="template-character">
+				<div class="card">
+					<figure class="card__image">
+						<img src="" alt="" class="image">
+					</figure>
+
+					<h2 class="card__title"></h2>
+
+					<div class="card__id"></div>
+
+					<p class="card__short-description"></p>
+
+					<div class="card__description"></div>
+				</div>
+			</template>
+
 			<div class="target" id="target"></div>
+
+			<div class="target" id="target2"></div>
 
 			<div class="button__new-character" id="new-character">
 				<a href="character-creation.html" target="_blank">
