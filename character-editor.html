@@ -5,13 +5,44 @@
 		<!-- Import Google Icon Font -->
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<!-- Import materialize.css -->
-		<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+		<link rel="stylesheet" href="css/editor.css" />
 
 		<!-- Let browser know website is optimized for mobile -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+		<title>Character editor</title>
 	</head>
 
 	<body>
+
+			<main>
+
+				<h1>Edit character</h1>
+				
+				<div class="character-editor">
+					<h2>Change image:</h2>
+					<span id="character-image"></span>
+					<p>(Only accepts .jpeg or .jpg images)</p>
+					<input type="file" id="image" onchange="encodeImageFileAsURL(this)" accept="image/jpeg, image/jpg"><br><br>
+					<span id="imgTest"></span>
+	
+					<h2>Name:</h2>
+					<input type="text" id="name"><br><br>
+	
+					<h2>Short description:</h2>
+					<input type="text" id="short-description"><br><br>
+	
+					<h2>Description:</h2>
+					<textarea type="text" id="description"></textarea><br><br>
+				
+	
+					<button id="submit">Save modifications</button>
+					</br>
+					<button id="delete">Delete character</button>
+				</div>
+	
+			</main>
+		</div>
 
 		<!--JavaScript at end of body for optimized loading-->
 		<script type="text/javascript" src="js/materialize.min.js"></script>
