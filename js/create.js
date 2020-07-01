@@ -38,4 +38,13 @@ document.getElementById("submit").addEventListener("click", function() {
         }),
     });
 
+    setTimeout(function(){
+        location.reload();
+    },1000);
+});
+
+document.getElementById("go-back").addEventListener("click", function() {
+    
+    window.location.replace("index.html");
+
 });
