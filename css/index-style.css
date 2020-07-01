@@ -1,3 +1,4 @@
+
 body
 {
 	font-family: "Questrial", sans-serif;
@@ -17,16 +18,20 @@ main
 
 h1
 {
-	font-family: "Questrial", sans-serif;
+	font-family: "Walter Turncoat", sans-serif;
 	font-size: 200%;
 	color: rgb(255, 255, 255);
 	margin: 0 0 40px 0;
 	text-align: center;
+	background-color: rgb(3, 150, 220);
+	padding: 10px 0 10px 0;
+	border-radius: 10px 10px 50px 50px;
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 @media screen and (min-width: 320px) and (max-width: 480px)
 {
-	.card /* div */
+	.card, .card2 /* div */
 	{
 		background-color: rgb(255, 255, 255);
 		margin: 0 0 20px 0;
@@ -35,8 +40,8 @@ h1
 		padding: 20px;
 		box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 	}
-	
-	.target /* div */
+
+	.target, .target2 /* div */
 	{
 		margin: 0 0 40px 0;
 	}
@@ -53,8 +58,19 @@ h1
 		padding: 20px;
 		box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 	}
+
+	.card2 /* div */
+	{
+		background-color: rgb(255, 255, 255);
+		width: 70%;
+		margin: 0 auto 0 auto;
+		justify-content: center;
+		border-radius: 10px;
+		padding: 20px;
+		box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+	}
 	
-	.target /* div */
+	.target, .target2 /* div */
 	{
 		margin: 0 0 40px 0;
 	}
@@ -72,11 +88,27 @@ h1
 		padding: 20px;
 		box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 	}
+
+	.card2 /* div */
+	{
+		background-color: rgb(255, 255, 255);
+		width: 65%;
+		margin: 0 auto 0 auto;
+		justify-content: center;
+		border-radius: 10px;
+		padding: 20px;
+		box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+	}
 	
 	.target /* div */
 	{
 		display: grid;
 		grid-template-columns: 1fr 1fr;
+		margin: 0 0 40px 0;
+	}
+
+	.target2
+	{
 		margin: 0 0 40px 0;
 	}
 }
@@ -93,11 +125,27 @@ h1
 		padding: 20px;
 		box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 	}
+
+	.card2 /* div */
+	{
+		background-color: rgb(255, 255, 255);
+		width: 70%;
+		margin: 0 auto 0 auto;
+		justify-content: center;
+		border-radius: 10px;
+		padding: 20px;
+		box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+	}
 	
 	.target /* div */
 	{
 		display: grid;
 		grid-template-columns: 1fr 1fr;
+		margin: 0 0 40px 0;
+	}
+
+	.target2
+	{
 		margin: 0 0 40px 0;
 	}
 }
@@ -114,6 +162,17 @@ h1
 		padding: 20px;
 		box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 	}
+
+	.card2 /* div */
+	{
+		background-color: rgb(255, 255, 255);
+		width: 70%;
+		margin: 0 auto 0 auto;
+		justify-content: center;
+		border-radius: 10px;
+		padding: 20px;
+		box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+	}
 	
 	.target /* div */
 	{
@@ -121,21 +180,26 @@ h1
 		grid-template-columns: 1fr 1fr 1fr;
 		margin: 0 0 40px 0;
 	}
+
+	.target2
+	{
+		margin: 0 0 40px 0;
+	}
 }
 
-.card__image /* figure */
+.card__image, .card__image2 /* figure */
 {
 	margin: 0 auto 20px auto;
 	width: 100px;
 	height: 100px;
 }
 
-.card__image > img
+.card__image > img, .card__image2 > img
 {
 	border-radius: 100px;
 }
 
-.card__title /* h2 */
+.card__title, .card__title2 /* h2 */
 {
 	margin: 0 0 20px 0;
 	text-align: center;
@@ -162,7 +226,7 @@ h1
 	font-family: "Indie Flower", cursive;
 }
 
-.card__short-description /* p */
+.card__short-description, .card__short-description2 /* p */
 {
 	margin: 0 0 20px 0;
 	text-align: center;
@@ -170,14 +234,14 @@ h1
 	word-spacing: 2px;
 }
 
-.card__id /* div */
+.card__id, .card__id2 /* div */
 {
 	display: none;
 	text-align: center;
 	margin: 0 0 20px 0;
 }
 
-.card__description /* div */
+.card__description, .card__description2 /* div */
 {
 	display: none;
 	text-align: justify;
@@ -191,7 +255,6 @@ h1
 	padding: 0;
 	justify-items: center;
 	height: 35px;
-	bottom: 0;
 }
 
 .card__buttons > li
@@ -262,4 +325,52 @@ h1
 	letter-spacing: 2px;
 	word-spacing: 5px;
 	box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px)
+{
+	.button__reload
+	{
+		position: fixed;
+		top: 5px;
+		left: 5px;
+		width: 30px;
+		height: 30px;
+		padding: 5px;
+		border-style: solid;
+		border-width: 2px;
+		border-radius: 40px;
+		border-color: rgb(255, 255, 255);
+		background-color: rgb(4, 59, 140);
+	}
+
+	.button__reload > img
+	{
+		width: 100%;
+		border-radius: 30px;
+	}
+}
+
+@media screen and (min-width: 481px)
+{
+	.button__reload
+	{
+		position: fixed;
+		top: 30px;
+		left: 30px;
+		width: 40px;
+		height: 40px;
+		padding: 5px;
+		border-style: solid;
+		border-width: 2px;
+		border-radius: 40px;
+		border-color: rgb(255, 255, 255);
+		background-color: rgb(4, 59, 140);
+	}
+
+	.button__reload > img
+	{
+		width: 100%;
+		border-radius: 40px;
+	}
 }
