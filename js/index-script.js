@@ -58,7 +58,8 @@ charactersDatabase = fetch("https://character-database.becode.xyz/characters")
 			let select = data.find(element => element.id == clicid);
 
 			// Masquer l'affichage des cartes
-			document.getElementById("target").style.display = "none";
+			// document.getElementById("target").style.display = "none";
+			swipeDown();
 			// Afficher uniquement la carte du personnage sélectionné
 			document.getElementById("target2").style.display = "block";
 			
@@ -94,4 +95,11 @@ function changeMainTitle()
 {
 	mainTitle = document.querySelector("#title");
 	mainTitle.innerHTML = "SINGLE CHARACTER";
+}
+
+function swipeDown()
+{
+	let targetClass = document.querySelector(".target");
+	targetClass.classList.add("targetDown");
+	targetClass.classList.remove("target");
 }

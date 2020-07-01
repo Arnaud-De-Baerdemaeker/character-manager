@@ -1,3 +1,33 @@
+@keyframes pulse
+{
+	0%
+	{
+		transform: none;
+	}
+
+	50%
+	{
+		transform: scale(1.1, 1.1);
+	}
+
+	100%
+	{
+		transform: none;
+	}
+}
+
+@keyframes swipeDown
+{
+	from
+	{
+		
+	}
+	
+	to
+	{
+		
+	}
+}
 
 body
 {
@@ -27,6 +57,23 @@ h1
 	padding: 10px 0 10px 0;
 	border-radius: 10px 10px 50px 50px;
 	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+.targetDown
+{
+	position: absolute;
+	transform: translateY(100%);
+	transition-property: transform;
+	transition-duration: 1s;
+	overflow: hidden;
+
+}
+
+.card2
+{
+	animation-name: pulse;
+	animation-duration: 0.5s;
 }
 
 @media screen and (min-width: 320px) and (max-width: 480px)
@@ -222,7 +269,8 @@ h1
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
 	letter-spacing: 2px;
-	font-size: 250%;
+	font-size: 150%;
+	line-height: 100%;
 	font-family: "Indie Flower", cursive;
 }
 
@@ -230,7 +278,7 @@ h1
 {
 	margin: 0 0 20px 0;
 	text-align: center;
-	font-size: 150%;
+	font-size: 110%;
 	word-spacing: 2px;
 	word-wrap: break-word;
 }
@@ -369,9 +417,18 @@ h1
 		background-color: rgb(4, 59, 140);
 	}
 
+	
+
 	.button__reload > img
 	{
 		width: 100%;
 		border-radius: 40px;
 	}
+}
+
+.button__reload:hover, .button__new-character:hover, .card__buttons > li > a > button:hover, .card__buttons > li > button:hover
+{
+	animation-name: pulse;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
 }
