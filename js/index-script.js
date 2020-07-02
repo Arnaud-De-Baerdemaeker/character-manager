@@ -88,6 +88,8 @@ charactersDatabase = fetch("https://character-database.becode.xyz/characters")
 		newPlace1.appendChild(templateClone);
 	})
 
+
+	// Pour voir
 	let clicid;
 
 	// Pour chaque bouton cliqué...
@@ -133,22 +135,19 @@ charactersDatabase = fetch("https://character-database.becode.xyz/characters")
 			// Placer le clone de template 2 rempli avec les données dans la cible 2
 			newPlace2.appendChild(templateClone2);
 		});
-
-		// Au clic du bouton, refresh de la page pour réafficher les cartes
-		document.getElementById("reload").addEventListener("click", () =>
-		{
-			location.reload();
-		})
 	});
 
 
+	// Pour éditer
 	let clickEdit;
     
     document.querySelectorAll(".edit").forEach((element) =>
 	{
         element.addEventListener("click", () =>
 		{
-            clickEdit= element.getAttribute("id");
+			changeMainTitleEdit();
+			
+			clickEdit= element.getAttribute("id");
 			let change = data.find(element => element.id == clickEdit);
 
             document.getElementById("target").style.display = "none";
@@ -195,13 +194,16 @@ charactersDatabase = fetch("https://character-database.becode.xyz/characters")
 	});
 	
 
+	// Pour supprimer
 	let clickDelete;
     
     document.querySelectorAll(".delete").forEach((element) =>
 	{
         element.addEventListener("click", () =>
 		{
-            clickDelete = element.getAttribute("id");
+			changeMainTitleDelete();
+			
+			clickDelete = element.getAttribute("id");
 			let toBeDeleted = data.find(element => element.id == clickDelete);
 
             document.getElementById("target").style.display = "none";
@@ -229,11 +231,29 @@ charactersDatabase = fetch("https://character-database.becode.xyz/characters")
                 location.reload();
             })
         })
-    });
+	});
+	
+	// Au clic du bouton, refresh de la page pour réafficher les cartes
+	document.getElementById("reload").addEventListener("click", () =>
+	{
+		location.reload();
+	})
 });
 
 function changeMainTitle()
 {
 	mainTitle = document.querySelector("#title");
 	mainTitle.innerHTML = "SINGLE CHARACTER";
+}
+
+function changeMainTitleEdit()
+{
+	mainTitle = document.querySelector("#title");
+	mainTitle.innerHTML = "EDIT CHARACTER";
+}
+
+function changeMainTitleDelete()
+{
+	mainTitle = document.querySelector("#title");
+	mainTitle.innerHTML = "DELETE CHARACTER";
 }
