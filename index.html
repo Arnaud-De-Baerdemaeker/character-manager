@@ -35,11 +35,9 @@
 							</button>
 						</li>
 						<li>
-							<a href="character-editor.html">
-								<button class="edit" title="Edit the character">
-									<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiIHdpZHRoPSIxOHB4IiBoZWlnaHQ9IjE4cHgiPjxwYXRoIGQ9Ik0wIDBoMjR2MjRIMFYweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0zIDE3LjQ2djMuMDRjMCAuMjguMjIuNS41LjVoMy4wNGMuMTMgMCAuMjYtLjA1LjM1LS4xNUwxNy44MSA5Ljk0bC0zLjc1LTMuNzVMMy4xNSAxNy4xYy0uMS4xLS4xNS4yMi0uMTUuMzZ6TTIwLjcxIDcuMDRjLjM5LS4zOS4zOS0xLjAyIDAtMS40MWwtMi4zNC0yLjM0Yy0uMzktLjM5LTEuMDItLjM5LTEuNDEgMGwtMS44MyAxLjgzIDMuNzUgMy43NSAxLjgzLTEuODN6Ii8+PC9zdmc+" alt="Edit">
-								</button>
-							</a>
+							<button class="edit" title="Edit the character">
+								<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiIHdpZHRoPSIxOHB4IiBoZWlnaHQ9IjE4cHgiPjxwYXRoIGQ9Ik0wIDBoMjR2MjRIMFYweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0zIDE3LjQ2djMuMDRjMCAuMjguMjIuNS41LjVoMy4wNGMuMTMgMCAuMjYtLjA1LjM1LS4xNUwxNy44MSA5Ljk0bC0zLjc1LTMuNzVMMy4xNSAxNy4xYy0uMS4xLS4xNS4yMi0uMTUuMzZ6TTIwLjcxIDcuMDRjLjM5LS4zOS4zOS0xLjAyIDAtMS40MWwtMi4zNC0yLjM0Yy0uMzktLjM5LTEuMDItLjM5LTEuNDEgMGwtMS44MyAxLjgzIDMuNzUgMy43NSAxLjgzLTEuODN6Ii8+PC9zdmc+" alt="Edit">
+							</button>
 						</li>
 						<li>
 							<button class="delete" title="Delete the character" id="delete">
@@ -70,6 +68,63 @@
 			<div class="target" id="target"></div>
 
 			<div class="target2" id="target2"></div>
+
+
+			<template id="template-editor">
+				<div class="card3">
+					<figure class="edit__image card__image2">
+						<img src="" alt="" class="image image2">
+					</figure>
+
+					<input type="file" id="image" onchange="encodeImageFileAsURL(this)" accept="image/jpeg, image/jpg">
+
+					<p>
+						(Only accepts .jpeg or .jpg images)
+					</p>
+
+					<label for="edit__title">Name :</label>
+					<textarea class="edit__title"></textarea>
+
+					<label for="edit__short-description">Short description :</label>
+					<textarea class="edit__short-description"></textarea>
+
+					<label for="edit__description">Description :</label>
+					<textarea class="edit__description"></textarea>
+
+					<button id="changes" class="card3__button">
+						<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiIHdpZHRoPSIxOHB4IiBoZWlnaHQ9IjE4cHgiPjxwYXRoIGQ9Ik0wIDBoMjR2MjRIMFYweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0xNy41OSAzLjU5Yy0uMzgtLjM4LS44OS0uNTktMS40Mi0uNTlINWMtMS4xMSAwLTIgLjktMiAydjE0YzAgMS4xLjkgMiAyIDJoMTRjMS4xIDAgMi0uOSAyLTJWNy44M2MwLS41My0uMjEtMS4wNC0uNTktMS40MWwtMi44Mi0yLjgzek0xMiAxOWMtMS42NiAwLTMtMS4zNC0zLTNzMS4zNC0zIDMtMyAzIDEuMzQgMyAzLTEuMzQgMy0zIDN6bTEtMTBIN2MtMS4xIDAtMi0uOS0yLTJzLjktMiAyLTJoNmMxLjEgMCAyIC45IDIgMnMtLjkgMi0yIDJ6Ii8+PC9zdmc+" alt="">
+					</button>
+				</div>
+			</template>
+
+
+			<template id="template-delete">
+				<div class="card4">
+					<figure class="card__image2">
+						<img src="" alt="" class="image image2">
+					</figure>
+
+					<h2 class="card__title"></h2>
+
+					<p>
+						Are you sure you want to delete this character ?
+					</p>
+					
+					<div>
+						<button class="card4__button" id="approve-delete">
+							<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiIHdpZHRoPSIxOHB4IiBoZWlnaHQ9IjE4cHgiPjxwYXRoIGQ9Ik0wIDBoMjR2MjRIMFYweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik05IDE2LjJsLTMuNS0zLjVjLS4zOS0uMzktMS4wMS0uMzktMS40IDAtLjM5LjM5LS4zOSAxLjAxIDAgMS40bDQuMTkgNC4xOWMuMzkuMzkgMS4wMi4zOSAxLjQxIDBMMjAuMyA3LjdjLjM5LS4zOS4zOS0xLjAxIDAtMS40LS4zOS0uMzktMS4wMS0uMzktMS40IDBMOSAxNi4yeiIvPjwvc3ZnPg==" alt="">
+						</button>
+					
+						<button class="card4__button" id="refuse-delete">
+						<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiIHdpZHRoPSIxOHB4IiBoZWlnaHQ9IjE4cHgiPjxwYXRoIGQ9Ik0wIDBoMjR2MjRIMFYweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0xOC4zIDUuNzFjLS4zOS0uMzktMS4wMi0uMzktMS40MSAwTDEyIDEwLjU5IDcuMTEgNS43Yy0uMzktLjM5LTEuMDItLjM5LTEuNDEgMC0uMzkuMzktLjM5IDEuMDIgMCAxLjQxTDEwLjU5IDEyIDUuNyAxNi44OWMtLjM5LjM5LS4zOSAxLjAyIDAgMS40MS4zOS4zOSAxLjAyLjM5IDEuNDEgMEwxMiAxMy40MWw0Ljg5IDQuODljLjM5LjM5IDEuMDIuMzkgMS40MSAwIC4zOS0uMzkuMzktMS4wMiAwLTEuNDFMMTMuNDEgMTJsNC44OS00Ljg5Yy4zOC0uMzguMzgtMS4wMiAwLTEuNHoiLz48L3N2Zz4=" alt="">
+						</button>
+					</div>
+				</div>
+			</template>
+
+			<div class="target3" id="target3"></div>
+
+			<div class="target4" id="target4"></div>
 
 			<div class="button__new-character" id="new-character">
 				<a href="character-creation.html" target="_blank">
