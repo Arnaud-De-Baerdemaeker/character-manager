@@ -48,7 +48,7 @@ h1
 	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
-.card2, .card3, .card4
+.card, .card2, .card3, .card4
 {
 	animation-name: pulse;
 	animation-duration: 0.5s;
@@ -174,7 +174,7 @@ h1
 		margin: 0 0 40px 0;
 	}
 
-	.target2
+	.target2, .target4
 	{
 		margin: 0 0 40px 0;
 	}
@@ -212,7 +212,7 @@ h1
 		margin: 0 0 40px 0;
 	}
 
-	.target2
+	.target2, .target4
 	{
 		margin: 0 0 40px 0;
 	}
@@ -258,9 +258,18 @@ h1
 	font-family: "Indie Flower", cursive;
 }
 
-.card__short-description, .card__short-description2 /* p */
+.card__short-description /* p */
 {
-	margin: 0 0 50px 0;
+	margin: 0 0 55px 0;
+	text-align: center;
+	font-size: 110%;
+	word-spacing: 2px;
+	word-wrap: break-word;
+}
+
+.card__short-description2
+{
+	margin: 0 0 20px 0;
 	text-align: center;
 	font-size: 110%;
 	word-spacing: 2px;
@@ -333,11 +342,16 @@ h1
 	height: 20px;
 }
 
+input
+{
+	margin: 0 0 20px 0;
+}
+
 .card3__button
 {
 	display: block;
-	width: 50px;
-	height: 50px;
+	width: 60px;
+	height: 35px;
 	align-items: center;
 	padding: 0;
 	background-color: rgb(4, 59, 140);
@@ -348,7 +362,7 @@ h1
 	margin: 0 auto 0 auto;
 }
 
-.card4__button > div
+.card4 > div
 {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -357,26 +371,20 @@ h1
 
 .card4__button
 {
-	width: 50px;
-	height: 50px;
+	width: 60px;
+	height: 35px;
 	padding: 0;
 	background-color: rgb(4, 59, 140);
 	border: none;
 	border-radius: 2px;
 	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 	color: rgb(255, 255, 255);
-	margin: 0 auto 0 auto;
-	justify-self: center;
-}
-
-.card3__button > img
-{
-	width: 50%;
 }
 
 .card3 > p, .card4 > p
 {
 	text-align: center;
+	margin: 0 0 20px 0;
 }
 
 textarea
@@ -474,7 +482,7 @@ textarea:last-of-type
 	}
 }
 
-.button__reload:hover, .button__new-character:hover, .card__buttons > li > a > button:hover, .card__buttons > li > button:hover, .card3__button:hover
+.button__reload:hover, .button__new-character:hover, .card__buttons > li > a > button:hover, .card__buttons > li > button:hover, .card3__button:hover, .card4__button:hover
 {
 	animation-name: pulse;
 	animation-duration: 1s;
