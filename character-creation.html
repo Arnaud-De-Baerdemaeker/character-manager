@@ -18,28 +18,42 @@
 
 		<main>
 
-			<h1>Create a new character</h1>
+			<h1 id="title">
+				Create a new character
+			</h1>
 			
 			<div class="character-creation">
-				<h2>Image:</h2>
+
+				<label class="center" for="image">Image:
+					<input type="file" id="image" class="image" onchange="encodeImageFileAsURL(this)" accept="image/jpeg, image/jpg">
+				</label>
 				<p>(Only accepts .jpeg or .jpg images)</p>
-				<input type="file" id="image" onchange="encodeImageFileAsURL(this)" accept="image/jpeg, image/jpg"><br><br>
-				<span id="imgTest"></span>
+				<br><br>
 
-				<h2>Name:</h2>
-				<input type="text" id="name"><br><br>
+				<label for="name">Name:
+					<input type="text" id="name" class="name">
+				</label>
+				<br><br>
 
-				<h2>Short description:</h2>
-				<input type="text" id="short-description"><br><br>
+				<label for="short-description">Short description:
+					<input type="text" id="short-description" class="short-description">
+				</h2>
+				<br><br>
 
-				<h2>Description:</h2>
-				<textarea type="text" id="description"></textarea><br><br>
+				<label for="description">Description:
+					<textarea type="text" id="description" class="description"></textarea>
+				</label>
+				<br><br>
 			
 
-				<button id="submit">Create character</button>
+				<button id="submit">
+					<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiIHdpZHRoPSIxOHB4IiBoZWlnaHQ9IjE4cHgiPjxwYXRoIGQ9Ik0wIDBoMjR2MjRIMFYweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik05IDE2LjJsLTMuNS0zLjVjLS4zOS0uMzktMS4wMS0uMzktMS40IDAtLjM5LjM5LS4zOSAxLjAxIDAgMS40bDQuMTkgNC4xOWMuMzkuMzkgMS4wMi4zOSAxLjQxIDBMMjAuMyA3LjdjLjM5LS4zOS4zOS0xLjAxIDAtMS40LS4zOS0uMzktMS4wMS0uMzktMS40IDBMOSAxNi4yeiIvPjwvc3ZnPg==" alt="">
+				</button>
 			</div>
 
-			<button id="go-back">Go back</button>
+			<div class="button__reload" id="go-back" title="Go back">
+				<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiIHdpZHRoPSIxOHB4IiBoZWlnaHQ9IjE4cHgiPjxwYXRoIGQ9Ik0xMiA1VjIuMjFjMC0uNDUtLjU0LS42Ny0uODUtLjM1bC0zLjggMy43OWMtLjIuMi0uMi41MSAwIC43MWwzLjc5IDMuNzljLjMyLjMxLjg2LjA5Ljg2LS4zNlY3YzMuNzMgMCA2LjY4IDMuNDIgNS44NiA3LjI5LS40NyAyLjI3LTIuMzEgNC4xLTQuNTcgNC41Ny0zLjU3Ljc1LTYuNzUtMS43LTcuMjMtNS4wMS0uMDctLjQ4LS40OS0uODUtLjk4LS44NS0uNiAwLTEuMDguNTMtMSAxLjEzLjYyIDQuMzkgNC44IDcuNjQgOS41MyA2LjcyIDMuMTItLjYxIDUuNjMtMy4xMiA2LjI0LTYuMjRDMjAuODQgOS40OCAxNi45NCA1IDEyIDV6Ii8+PC9zdmc+" alt="Reload">
+			</div>
 
 		</main>
 
